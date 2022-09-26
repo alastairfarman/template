@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 300px;
+}
+
+#name {
+  background-color: blue;
+}
+
+.bk {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+}
+
+.wh {
+  background-color: white;
+  height: 100vh;
+}
+
+.info {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.img-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}

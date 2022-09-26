@@ -3,9 +3,14 @@ import './App.css';
 
 function App() {
   return (
-    <p>
-      Cleanedup React App
-    </p>
+    <>
+    <header id='name'></header>
+    <div className='bk'>
+      <div className='info'>Information</div>
+      <div className='img-container'>Image</div>
+    </div>
+    <div className='wh'></div>
+    </>
   );
 }
 
