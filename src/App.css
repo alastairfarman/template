@@ -24,8 +24,30 @@
 }
 
 #name {
-  background-color: blue;
-  height: 300px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 70px;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  display: flex;
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  opacity:0;
+}
+
+#name h1{
+  font-family: "Inter Tight";
+  font-size: 22px;
+  font-weight: 500;
+}
+
+#name:hover{
+  opacity: 100;
+  transition: all 1s;
+
 }
 
 .bk {
@@ -55,11 +77,10 @@ section {
   object-fit: cover;
 }
 
-.wh video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
+.wh video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .bk img {
@@ -86,20 +107,22 @@ section {
   color: white;
 }
 
-.headline-1, .headline-1-i {
+.headline-1,
+.headline-1-i {
   font-family: "Betatron-Regular";
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 10rem;
+  font-size: 10vw;
 }
 
-.headline-2, .headline-2-i {
+.headline-2,
+.headline-2-i {
   font-family: "Betatron-Regular";
   position: absolute;
   bottom: 0;
   right: 0;
-  font-size: 10rem;
+  font-size: 10vw;
 }
 
 .plus {
@@ -135,7 +158,7 @@ section {
 }
 
 .plus:hover span svg {
-  stroke-opacity: 1;
+  stroke: #fff;
   transition: stroke-opacity 0.3s;
   transition: rotate 1s;
 }
@@ -158,33 +181,98 @@ section {
 
 .plus.open .ls-info {
   opacity: 100;
-  transition: all 2s cubic-bezier(.87,0,.58,.02);
-
+  transition: all 2s cubic-bezier(0.87, 0, 0.58, 0.02);
 }
-
 
 .info p {
   margin: 4rem;
   text-align: center;
 }
 
-#bb1{
-    position: absolute;
-    translate: -50%;
-    object-fit: contain;
+#bb1 {
+  position: absolute;
+  translate: -50%;
+  object-fit: contain;
 }
 
-#bb2{
-    position: absolute;
-    translate: 50%;
-    object-fit: contain;   
+#bb2 {
+  position: absolute;
+  translate: 50%;
+  object-fit: contain;
 }
 
-.center-text{
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
-    left: 50%;
-    right: 50%;
-    color: black;
+.center-text {
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  color: black;
+}
+
+.changecol {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  background: linear-gradient(90deg, #39d4f7, #f739d7, #ebf92e);
+  background-size: 600% 600%;
+  -webkit-animation: AnimationName 3s ease infinite;
+  -moz-animation: AnimationName 3s ease infinite;
+  animation: AnimationName 3s ease infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: color 0.5s;
+}
+
+.changecol:hover {
+  background: none;
+  background-clip: unset;
+  color: black;
+  transition: color 0.5s;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 2%;
+  }
+  50% {
+    background-position: 100% 99%;
+  }
+  100% {
+    background-position: 0% 2%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 2%;
+  }
+  50% {
+    background-position: 100% 99%;
+  }
+  100% {
+    background-position: 0% 2%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 2%;
+  }
+  50% {
+    background-position: 100% 99%;
+  }
+  100% {
+    background-position: 0% 2%;
+  }
+}
+
+#sunglasses {
+  position: relative;
+}
+
+#sun {
+  height: 100vh;
 }

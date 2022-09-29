@@ -13,8 +13,8 @@ export default function HoverInfo(props) {
             height="50"
             viewBox="0 0 50 50"
             overflow="visible"
-            stroke="white"
-            strokeOpacity="0.4"
+            stroke="#a1a1a1"
+            strokeOpacity="1"
             strokeWidth="10"
             strokeLinecap="flat"
           >
