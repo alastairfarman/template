@@ -63,7 +63,10 @@ export default function BB() {
           onClick={(e) => setActiveBear(e.target.dataset.key)}
         ></img>
       </div>
-      <h3 className="center-text">Be@rbrick x Dr Martens</h3>
+      <div className="brand-container">
+      <img src="./img/dm.png" alt=""></img>
+      <img src="./img/bb.png" alt=""></img>
+      </div>
       <HoverInfo id={3} info={copy} />
     </section>
   );
