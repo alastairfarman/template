@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import HackneyMarshes from "./HackneyMarshes";
 import TheNorthFace from "./TheNorthFace";
@@ -37,33 +37,57 @@ function App() {
 
     //bearbricks movement
     let big = document.getElementById("big-bear");
-    let bb2 = document.getElementById("bb2");
     let offset =
       big.getBoundingClientRect().top +
       big.ownerDocument.defaultView.pageYOffset;
     let num = (pos - offset) / 20 + 20;
 
     big.style.transform = `rotate(${num / 2}deg)`;
-    bb2.style.transform = `rotate(${(num * -1) / 2}deg)`;
     big.style.scale = 1 + num / 100 / 2;
-    bb2.style.scale = 1 + num / 100 / 2;
     big.style.translate = `${-50 + num / 10}%`;
-    bb2.style.translate = `${50 - num / 10}%`;
-
-    //sunglasses scroll rotate - commented out to use slider instead
-
-    //   let sunglasses = document.getElementById("sunglasses");
-    //   let sunOffset =
-    //     sunglasses.getBoundingClientRect().top +
-    //     sunglasses.ownerDocument.defaultView.pageYOffset;
-
-    //   if (Math.round((pos - sunOffset + 600) / 19) < 1) {
-    //   } else if (Math.round((pos - sunOffset + 600) / 19) < 32) {
-    //     setImageNum(Math.round((pos - sunOffset + 600) / 19));
-    //   }
   };
 
+  //activate BB selector
 
+  useEffect(() => {
+    const dock = document.getElementById("bb-hover");
+    const bears = document.querySelectorAll(".small-bear");
+   
+    bears.forEach((li) => {
+      li.addEventListener("mousemove", (e) => {
+        let item = e.target;
+        let itemRect = item.getBoundingClientRect();
+        let offset = Math.abs(e.clientX - itemRect.left) / itemRect.width;
+
+        let prev = item.previousElementSibling || null;
+        let next = item.nextElementSibling || null;
+
+        let scale = 0.8;
+
+        resetScale();
+
+        if (prev) {
+          prev.style.setProperty("--scale", 1 + scale * Math.abs(offset - 1));
+        }
+
+        item.style.setProperty("--scale", 1 + scale);
+
+        if (next) {
+          next.style.setProperty("--scale", 1 + scale * offset);
+        }
+      });
+    });
+
+    dock.addEventListener("mouseleave", (e) => {
+      resetScale();
+    });
+
+    function resetScale() {
+      bears.forEach((li) => {
+        li.style.setProperty("--scale", 1);
+      });
+    }
+  });
 
   return (
     <>

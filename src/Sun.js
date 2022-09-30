@@ -11,9 +11,8 @@ export default function Sun(props) {
   const [sunNum, setSunNum] = useState(1);
   const [imageNum, setImageNum] = useState(1);
   const imgURL = `./img/sun/${sunNum}/${imageNum}.png`;
-  const rangeSlider = document.getElementById("sliderRange");
-
   const changeImageRotation = () => {
+    let rangeSlider = document.getElementById("sliderRange");
     setImageNum(rangeSlider.value);
   };
 
@@ -22,6 +21,7 @@ export default function Sun(props) {
       setSunNum(sunNum + 1);
     } else setSunNum(1);
   };
+
 
   return (
     <section className="wh" id="sun">
