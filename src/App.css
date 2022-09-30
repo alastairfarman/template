@@ -35,19 +35,18 @@
   z-index: 2000;
   justify-content: center;
   align-items: center;
-  opacity:0;
+  opacity: 0;
 }
 
-#name h1{
+#name h1 {
   font-family: "Inter Tight";
   font-size: 22px;
   font-weight: 500;
 }
 
-#name:hover{
+#name:hover {
   opacity: 100;
   transition: all 1s;
-
 }
 
 .bk {
@@ -189,16 +188,33 @@ section {
   text-align: center;
 }
 
-#bb1 {
+#big-bear {
   position: absolute;
   translate: -50%;
   object-fit: contain;
+  z-index: 5;
 }
 
 #bb2 {
   position: absolute;
   translate: 50%;
   object-fit: contain;
+  z-index: 5;
+}
+
+.wh img.small-bear {
+  object-fit: contain;
+}
+
+#bb-hover {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  height: 100px;
 }
 
 .center-text {
@@ -211,9 +227,6 @@ section {
 }
 
 .changecol {
-  position: absolute;
-  bottom: 0;
-  right: 0;
   margin: 1rem;
   font-weight: 800;
   cursor: pointer;
@@ -226,6 +239,40 @@ section {
   background-clip: text;
   color: transparent;
   transition: color 0.5s;
+}
+
+.interaction-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 15vw; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04aa6d; /* Green background */
+  cursor: pointer; /* Cursor on hover */
 }
 
 .changecol:hover {

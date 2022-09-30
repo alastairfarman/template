@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./App.css";
-import HoverInfo from "./HoverInfo";
 import HackneyMarshes from "./HackneyMarshes";
 import TheNorthFace from "./TheNorthFace";
 import Drive from "./Drive";
 import BB from "./BB";
 import Sun from "./Sun";
+import SunVid from "./SunVid";
 
 function App() {
   //scroll bhvr//
@@ -35,35 +35,35 @@ function App() {
       }px`;
     }
 
-    //bearbricks
-    let bb1 = document.getElementById("bb1");
+    //bearbricks movement
+    let big = document.getElementById("big-bear");
     let bb2 = document.getElementById("bb2");
     let offset =
-      bb1.getBoundingClientRect().top +
-      bb1.ownerDocument.defaultView.pageYOffset;
+      big.getBoundingClientRect().top +
+      big.ownerDocument.defaultView.pageYOffset;
     let num = (pos - offset) / 20 + 20;
 
-    bb1.style.transform = `rotate(${num / 2}deg)`;
+    big.style.transform = `rotate(${num / 2}deg)`;
     bb2.style.transform = `rotate(${(num * -1) / 2}deg)`;
-    bb1.style.scale = 1 + num / 100 / 2;
+    big.style.scale = 1 + num / 100 / 2;
     bb2.style.scale = 1 + num / 100 / 2;
-    bb1.style.translate = `${-50 + num / 10}%`;
+    big.style.translate = `${-50 + num / 10}%`;
     bb2.style.translate = `${50 - num / 10}%`;
 
-    //sunglasses
+    //sunglasses scroll rotate - commented out to use slider instead
 
-    let sunglasses = document.getElementById("sunglasses");
-    let sunOffset =
-      sunglasses.getBoundingClientRect().top +
-      sunglasses.ownerDocument.defaultView.pageYOffset;
+    //   let sunglasses = document.getElementById("sunglasses");
+    //   let sunOffset =
+    //     sunglasses.getBoundingClientRect().top +
+    //     sunglasses.ownerDocument.defaultView.pageYOffset;
 
-    if (Math.round((pos - sunOffset + 600) / 19) < 1) {
-    } else if (Math.round((pos - sunOffset + 600) / 19) < 32) {
-      setImageNum(Math.round((pos - sunOffset + 600) / 19));
-    }
+    //   if (Math.round((pos - sunOffset + 600) / 19) < 1) {
+    //   } else if (Math.round((pos - sunOffset + 600) / 19) < 32) {
+    //     setImageNum(Math.round((pos - sunOffset + 600) / 19));
+    //   }
   };
 
-  const [imageNum, setImageNum] = useState(1);
+
 
   return (
     <>
@@ -71,7 +71,8 @@ function App() {
         <h1>Alastair Farman</h1>
       </header>
       <TheNorthFace />
-      <Sun imageNum={imageNum} />
+      <Sun />
+      <SunVid />
       <BB />
       <section className="bk"></section>
       <HackneyMarshes />
