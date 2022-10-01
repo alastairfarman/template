@@ -47,6 +47,14 @@ export default function BB() {
       <div id="bb-hover">
         <img
           className="small-bear"
+          src="./img/bb4.png"
+          data-key="4"
+          alt=""
+          onClick={changeBear}
+        ></img>
+
+        <img
+          className="small-bear"
           src="./img/bb1.png"
           data-key="1"
           alt=""
@@ -55,24 +63,8 @@ export default function BB() {
 
         <img
           className="small-bear"
-          src="./img/bb2.png"
-          data-key="2"
-          alt=""
-          onClick={changeBear}
-        ></img>
-
-        <img
-          className="small-bear"
-          src="./img/bb3.png"
-          data-key="3"
-          alt=""
-          onClick={changeBear}
-        ></img>
-
-        <img
-          className="small-bear"
-          src="./img/bb4.png"
-          data-key="4"
+          src="./img/bb6.png"
+          data-key="6"
           alt=""
           onClick={changeBear}
         ></img>
@@ -87,12 +79,21 @@ export default function BB() {
 
         <img
           className="small-bear"
-          src="./img/bb6.png"
-          data-key="6"
+          src="./img/bb3.png"
+          data-key="3"
+          alt=""
+          onClick={changeBear}
+        ></img>
+
+        <img
+          className="small-bear"
+          src="./img/bb2.png"
+          data-key="2"
           alt=""
           onClick={changeBear}
         ></img>
       </div>
+
       <div className="empty"></div>
       <div className="brand-container">
         <div className="brands">

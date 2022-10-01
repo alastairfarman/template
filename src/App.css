@@ -172,12 +172,19 @@ section {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.plus.open p {
+  max-width: 90%;
+  text-align: center;
+}
+
 .plus.open svg {
   transition: all 1s;
   rotate: 45deg;
 }
 
 .ls-info {
+  display: flex;
+  justify-content: center;
   opacity: 0;
 }
 
@@ -497,5 +504,21 @@ section {
     height: calc(65px * var(--scale));
     padding: 0 1rem 0 1rem;
     justify-self: end;
+  }
+
+  .plus {
+    top: 0;
+    bottom: auto;
+    left: auto;
+    right: 0;
+  }
+
+  .plus span {
+    bottom: auto;
+    left: auto;
+    top: 0;
+    right: 0;
+    margin: 14px;
+    margin-right: 17px;
   }
 }
