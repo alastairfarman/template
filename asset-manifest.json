@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.646ecb18.css",
-    "main.js": "./static/js/main.29320805.js",
+    "main.css": "./static/css/main.8cc227c3.css",
+    "main.js": "./static/js/main.b8ca4be8.js",
     "static/media/Betatron-Regular.woff": "./static/media/Betatron-Regular.6415ebb6316b142c4581.woff",
     "static/media/Betatron-Regular.woff2": "./static/media/Betatron-Regular.3ae11331a2c77b6c3572.woff2",
     "index.html": "./index.html",
-    "main.646ecb18.css.map": "./static/css/main.646ecb18.css.map",
-    "main.29320805.js.map": "./static/js/main.29320805.js.map"
+    "main.8cc227c3.css.map": "./static/css/main.8cc227c3.css.map",
+    "main.b8ca4be8.js.map": "./static/js/main.b8ca4be8.js.map"
   },
   "entrypoints": [
-    "static/css/main.646ecb18.css",
-    "static/js/main.29320805.js"
+    "static/css/main.8cc227c3.css",
+    "static/js/main.b8ca4be8.js"
   ]
 }
