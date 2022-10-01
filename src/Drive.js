@@ -9,7 +9,7 @@ export default function Drive() {
   return (
     <section className="wh" id="drive">
       <video muted autoPlay loop id="drive">
-        <source src="../img/3.mp4" type="video/mp4" />
+        <source src="./img/3.mp4" type="video/mp4" />
       </video>
       <HoverInfo id={2} info={copy} />
     </section>

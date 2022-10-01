@@ -10,7 +10,7 @@ export default function HackneyMarshes(){
           <h1 className="headline-2">Marshes</h1>
         </div>
         <div className="img-container">
-          <img src="../img/2.jpg" alt=""></img>
+          <img src="./img/2.jpg" alt=""></img>
         </div>
       </section>
     )

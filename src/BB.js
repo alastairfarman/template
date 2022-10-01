@@ -39,15 +39,15 @@ export default function BB() {
 
   return (
     <section className="wh" id="bearbrick">
-      <img id="big-bear" src={`../img/bb${activeBear}.png`} alt=""></img>
-      <img id="bear-move1" src={`../img/bb${activeBear}.png`} alt=""></img>
-      <img id="bear-move2" src={`../img/bb${activeBear}.png`} alt=""></img>
-      <img id="bear-move3" src={`../img/bb${activeBear}.png`} alt=""></img>
+      <img id="big-bear" src={`./img/bb${activeBear}.png`} alt=""></img>
+      <img id="bear-move1" src={`./img/bb${activeBear}.png`} alt=""></img>
+      <img id="bear-move2" src={`./img/bb${activeBear}.png`} alt=""></img>
+      <img id="bear-move3" src={`./img/bb${activeBear}.png`} alt=""></img>
 
       <div id="bb-hover">
         <img
           className="small-bear"
-          src="../img/bb1.png"
+          src="./img/bb1.png"
           data-key="1"
           alt=""
           onClick={changeBear}
@@ -55,7 +55,7 @@ export default function BB() {
 
         <img
           className="small-bear"
-          src="../img/bb2.png"
+          src="./img/bb2.png"
           data-key="2"
           alt=""
           onClick={changeBear}
@@ -63,7 +63,7 @@ export default function BB() {
 
         <img
           className="small-bear"
-          src="../img/bb3.png"
+          src="./img/bb3.png"
           data-key="3"
           alt=""
           onClick={changeBear}
@@ -71,7 +71,7 @@ export default function BB() {
 
         <img
           className="small-bear"
-          src="../img/bb4.png"
+          src="./img/bb4.png"
           data-key="4"
           alt=""
           onClick={changeBear}
@@ -79,7 +79,7 @@ export default function BB() {
 
         <img
           className="small-bear"
-          src="../img/bb5.png"
+          src="./img/bb5.png"
           data-key="5"
           alt=""
           onClick={changeBear}
@@ -87,7 +87,7 @@ export default function BB() {
 
         <img
           className="small-bear"
-          src="../img/bb6.png"
+          src="./img/bb6.png"
           data-key="6"
           alt=""
           onClick={changeBear}

@@ -10,7 +10,7 @@ const copy = {
 export default function TheNorthFace() {
   return (
     <section className="wh" id="thenorthface">
-      <img src="../img/1.jpg" alt=""></img>
+      <img src="./img/1.jpg" alt=""></img>
       <HoverInfo id={1} info={copy} />
     </section>
   );
