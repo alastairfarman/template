@@ -44,7 +44,7 @@ function App() {
 
     big.style.transform = `rotate(${num / 2}deg)`;
     big.style.scale = 1 + num / 100 / 2;
-    big.style.translate = `${-50 + num / 10}%`;
+    big.style.translate = `${-40 + num / 6}% ${num / 2}%`;
   };
 
   //activate BB selector
@@ -52,7 +52,7 @@ function App() {
   useEffect(() => {
     const dock = document.getElementById("bb-hover");
     const bears = document.querySelectorAll(".small-bear");
-   
+
     bears.forEach((li) => {
       li.addEventListener("mousemove", (e) => {
         let item = e.target;

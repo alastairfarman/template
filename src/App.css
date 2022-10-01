@@ -9,6 +9,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+
+
 * {
   margin: 0;
 }
@@ -27,8 +30,8 @@
   position: fixed;
   top: 0;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 70px;
+  background-color: rgba(0, 0, 0, 1);
+  height: 50px;
   color: rgb(255, 255, 255);
   overflow: hidden;
   display: flex;
@@ -46,7 +49,7 @@
 
 #name:hover {
   opacity: 100;
-  transition: all 1s;
+  transition: all 0.6s;
 }
 
 .bk {
@@ -189,62 +192,181 @@ section {
   text-align: center;
 }
 
+.bb-headline{
+ position: relative;
+ font-size: 2vw;
+ width: 600px;
+ font-family: 'Oswald', sans-serif;
+ font-weight: 500;
+ text-align: center;
+ text-transform: uppercase;
+
+}
+
+
 #bearbrick {
-  justify-content: center;
+  background-image: linear-gradient(to top, #f1f1f1, #f4f4f4, #f8f8f8, #fbfbfb, #ffffff);
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  position: relative;
+  align-items: center;
+  justify-items: center;
+ 
+}
+
+.empty {
+  width: 40vw;
 }
 
 .brand-container {
+  translate: 0 -55px;
   display: flex;
-  align-self: flex-start;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  gap: 2rem;
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(5px);
+  height: 30vw;
+  width: 30vw;
+  margin: 2rem;
+  background-color: rgba(0, 160, 252, 0.9);
+  backdrop-filter: blur(10px);
   z-index: 25;
+  gap: 2vw;
+  border-radius: 50%;
+  transition: background-color 0.5s ease-in-out;
+  animation: beat 2s ease-in-out 0s infinite alternate;
 }
-.brand-container > img {
-  height: 100px;
+
+@keyframes beat {
+  to {
+    height: 38vw;
+    width: 38vw;
+  }
+}
+
+.brand-container:hover {
+  transition: all 0.3s;
+}
+
+.brand-container img {
+  height: 7vw;
+}
+
+.brands{
+  display: flex;
+  gap: 2vw;
+
 }
 
 #big-bear {
   position: absolute;
-  translate: -50%;
+  translate: -40%;
   object-fit: contain;
   z-index: 5;
+  filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.4)) drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.7)) drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.8))
 }
 
-#big-bear2 {
+#bear-move1 {
   position: absolute;
-  translate: 50%;
-  object-fit: contain;
-  z-index: 5;
+  top: 100%;
+  right: 10%;
+  rotate: -35deg;
+  height: 200px;
+  width: auto;
+  filter: blur(7px);
+  opacity: 0.5;
+  z-index: 1;
+  animation: bear-move1 8s linear 0s infinite, rotation 40s linear 0s infinite;
 }
 
-#bb2 {
+#bear-move2 {
   position: absolute;
-  translate: 50%;
-  object-fit: contain;
-  z-index: 5;
+  top: 100%;
+  right: -10%;
+  rotate: 35deg;
+  height: 500px;
+  width: auto;
+  filter: blur(3px);
+  opacity: 0.7;
+  animation: bear-move2 10s linear 0s infinite, rotation 20s linear 0s infinite;
+  z-index: 3;
+}
+
+#bear-move3 {
+  position: absolute;
+  top: 100%;
+  right: -10%;
+  rotate: 35deg;
+  height: 80px;
+  width: auto;
+  filter: blur(6px);
+  opacity: 0.2;
+  animation: bear-move3 6s linear infinite, rotation 2s linear 0s infinite;
+  z-index: 1;
+}
+
+@keyframes rotation {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes bear-move1 {
+  from {
+    top: 100%;
+    right: -10%;
+  }
+  to {
+    top: -20%;
+    right: 50%;
+  }
+}
+
+@keyframes bear-move2 {
+  from {
+    top: 100%;
+    right: 60%;
+  }
+  to {
+    top: -50%;
+    right: 10%;
+  }
+}
+
+@keyframes bear-move3 {
+  0% {
+    top: -30%;
+    left: -20%;
+  }
+  33.333% {
+    top: 130%;
+    left: 120%;
+  }
+  100% {
+    top: 130%;
+    left: 120%;
+  }
 }
 
 .wh img.small-bear {
   z-index: 200;
   height: calc(100px * var(--scale));
   padding: 0 3rem 0 3rem;
+  cursor: pointer;
 }
+
 
 #bb-hover {
   background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
   list-style: none;
   position: absolute;
   bottom: 0;
   margin: 0rem;
   display: flex;
-  height: 130px;
+  height: 110px;
   width: inherit;
   justify-self: center;
   justify-content: center;
@@ -308,7 +430,7 @@ section {
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: #04aa6d; /* Green background */
+  background: #111111; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
 
